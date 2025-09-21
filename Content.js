@@ -8,7 +8,7 @@ document.addEventListener("click", function (e) {
       "ems1.png",
       "ems2.png",
       "ems3.png",
-      "ems44.png"
+      "ems4.png"
     ];
 
     const randomIndex = Math.floor(Math.random() * imageFiles.length);
