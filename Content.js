@@ -17,8 +17,8 @@ document.addEventListener("click", function (e) {
     const img = document.createElement("img");
     img.src = chrome.runtime.getURL("images/" + chosenImage);
 
-    const imgWidth = random(200,500);
-    const imgHeight = random(200,500);
+    const imgWidth = Math.random(200,500);
+    const imgHeight = Math.random(200,500);
     img.style.width = imgWidth + "px";
     img.style.height = imgHeight + "px";
 
