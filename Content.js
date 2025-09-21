@@ -4,21 +4,19 @@ document.addEventListener("click", function (e) {
   if (button && button.textContent.toLowerCase().includes("add")) {
     console.log("Add detected! Showing popup");
 
-    const imageFiles = [
-      "ems1.png",
-      "ems2.png",
-      "ems3.png",
-      "ems4.png"
-    ];
-
+    const imageFiles = ["ems1.png","ems2.png","ems3.png","ems4.png"];
     const randomIndex = Math.floor(Math.random() * imageFiles.length);
     const chosenImage = imageFiles[randomIndex];
 
     const img = document.createElement("img");
     img.src = chrome.runtime.getURL("images/" + chosenImage);
 
-    const imgWidth = Math.random()* (600 - 100 + 1)) + 100;
-    const imgHeight = Math.random()* (600 - 100 + 1)) + 100;
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const imgWidth = getRandomInt(100, 600);
+    const imgHeight = getRandomInt(100, 600);
     img.style.width = imgWidth + "px";
     img.style.height = imgHeight + "px";
 
